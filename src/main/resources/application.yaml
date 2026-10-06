@@ -1,11 +1,17 @@
 spring:
   application:
+    # Nome da aplicação Spring Boot.
     name: notificacao
   mail:
+    # Servidor SMTP utilizado para envio dos e-mails.
     host: smtp.gmail.com
+    # Porta SMTP com STARTTLS.
     port: 587
+    # E-mail utilizado para autenticação no Gmail.
     username: edutorres0222@gmail.com
+    # Senha de aplicativo armazenada como variável de ambiente.
     password: qanq renp efwp chrh
+    # Protocolo utilizado para envio dos e-mails.
     protocol: smtp
     properties:
       mail:
@@ -14,19 +20,27 @@ spring:
             port: 465
             class: javax.net.ssl.SSLSocketFactory
             falback: false
+            # Autenticação necessária para enviar os e-mails.
           auth: true
           starttls:
+            # Habilita STARTTLS para conexão segura.
             enable: true
+           # Tempo máximo para estabelecer a conexão
           connectiontimeout: 5000
           timeout: 3000
+          # Tempo máximo para enviar os dados.
           writetimeout: 5000
   thymeleaf:
+    # Habilita o processamento dos templates Thymeleaf.
     enable: true
 envio:
   email:
+    # E-mail que será utilizado como remetente.
     remetente: edutorres0222@gmail.com
+    # Nome exibido para o destinatário.
     nomeRemetente: "Javanauta"
 server:
+  # Porta em que o serviço de notificação será executado.
   port: 8082
 
 

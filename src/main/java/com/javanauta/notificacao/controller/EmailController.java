@@ -14,12 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/email")
 public class EmailController {
 
+    // Service responsável pela lógica de envio do e-mail.
     private final EmailService emailService;
 
+    // Endpoint responsável por solicitar o envio de um e-mail.
     @PostMapping
-    public ResponseEntity<Void> enviarEmail(@RequestBody TarefasDTO dto){
+    public ResponseEntity<Void> enviarEmail(@RequestBody TarefasDTO dto) {
+
+        // Envia os dados da tarefa para o Service montar e enviar o e-mail.
         emailService.enviaEmail(dto);
+
+        // Retorna HTTP 200 indicando que o envio foi solicitado com sucesso.
         return ResponseEntity.ok().build();
     }
-
 }
+
