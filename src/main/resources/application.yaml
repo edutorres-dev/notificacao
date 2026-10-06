@@ -1,3 +1,34 @@
 spring:
   application:
     name: notificacao
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: edutorres0222@gmail.com
+    password: qanq renp efwp chrh
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            falback: false
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+  thymeleaf:
+    enable: true
+envio:
+  email:
+    remetente: edutorres0222@gmail.com
+    nomeRemetente: "Javanauta"
+server:
+  port: 8082
+
+
+
+
