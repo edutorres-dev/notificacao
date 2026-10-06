@@ -8,9 +8,9 @@ spring:
     # Porta SMTP com STARTTLS.
     port: 587
     # E-mail utilizado para autenticação no Gmail.
-    username: edutorres0222@gmail.com
+    username:
     # Senha de aplicativo armazenada como variável de ambiente.
-    password: qanq renp efwp chrh
+    password:
     # Protocolo utilizado para envio dos e-mails.
     protocol: smtp
     properties:
@@ -36,7 +36,7 @@ spring:
 envio:
   email:
     # E-mail que será utilizado como remetente.
-    remetente: edutorres0222@gmail.com
+    remetente:
     # Nome exibido para o destinatário.
     nomeRemetente: "Javanauta"
 server:
