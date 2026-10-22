@@ -10,7 +10,7 @@ spring:
     # E-mail utilizado para autenticação no Gmail.
     username:
     # Senha de aplicativo armazenada como variável de ambiente.
-    password:
+    password: ${EMAIL_SENHA}
     # Protocolo utilizado para envio dos e-mails.
     protocol: smtp
     properties:
